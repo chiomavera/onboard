@@ -7,14 +7,20 @@ const TaskItem = ({ task, onToggle, onChange }) => {
         type="checkbox"
         checked={task.completed}
         onChange={onToggle}
-        className="w-4 h-4 border-2 border-black accent-[#50C2C9] cursor-pointer"
+        disabled={!task.label.trim()}
+        className={`w-4 h-4 border-2 border-black cursor-pointer accent-[#50C2C9] ${
+          !task.label.trim() ? "opacity-50 cursor-not-allowed" : ""
+        }`}
       />
+
       <input
         type="text"
         value={task.label}
         onChange={onChange}
         placeholder="Enter task..."
-        className="bg-transparent w-full focus:outline-none text-sm text-black font-semibold placeholder-gray-400"
+        className={`bg-transparent w-full focus:outline-none text-sm text-black font-semibold placeholder-gray-400 ${
+          task.completed ? "line-through text-gray-400" : ""
+        }`}
       />
     </div>
   );
