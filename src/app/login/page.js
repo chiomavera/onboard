@@ -30,7 +30,8 @@ const Login = () => {
     }, 2000);
   };
   return (
-    <TopLayout>
+  <div className="min-h-screen">
+      <TopLayout>
       <div className="flex items-center justify-center mb-10 ">
         <h1 className="text-lg font-bold">Welcome back</h1>
       </div>
@@ -109,6 +110,7 @@ const Login = () => {
         </a>
       </p>
     </TopLayout>
+  </div>
   );
 };
 

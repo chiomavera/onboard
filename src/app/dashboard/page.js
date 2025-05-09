@@ -43,7 +43,7 @@ const Dashboard = () => {
   };
 
   return (
-    <>
+    <div className="min-h-screen">
       <TopLayout bgColor="#50C2C9" ellipseSrc="/dashboard-ellipse.svg">
         <div className="flex flex-col items-center mt-20 mb-6">
           <Image
@@ -58,7 +58,8 @@ const Dashboard = () => {
           </h1>
         </div>
       </TopLayout>
-      <div className="bg-[#f3f3f3] p-4 pb-20 w-full sm:w-[480px] min-h-screen">
+
+      <div className="bg-[#f3f3f3] p-4 pb-20 w-full sm:w-[480px]">
         <div className="flex flex-col">
           <p className="text-xs text-right font-semibold mt-2">
             Good Afternoon
@@ -103,7 +104,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
