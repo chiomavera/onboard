@@ -33,7 +33,9 @@ const Register = () => {
     <TopLayout>
       <div className="flex flex-col items-center justify-center gap-4 mb-20">
         <h1 className="text-lg font-bold">Welcome to Onboard!</h1>
-        <p className="text-sm text-[#000000B3] leading-5">Let’s help to meet up your tasks.</p>
+        <p className="text-sm text-[#000000B3] leading-5">
+          Let’s help to meet up your tasks.
+        </p>
       </div>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         <div>

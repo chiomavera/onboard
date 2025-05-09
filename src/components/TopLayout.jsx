@@ -4,7 +4,11 @@ import { useEffect, useState } from "react";
 import { GiNetworkBars } from "react-icons/gi";
 import { FaWifi, FaBatteryThreeQuarters } from "react-icons/fa";
 
-const TopLayout = ({ children, bgColor = "#F6F6F6", ellipseSrc = "/ellipse-bg.svg" }) => {
+const TopLayout = ({
+  children,
+  bgColor = "#F6F6F6",
+  ellipseSrc = "/ellipse-bg.svg",
+}) => {
   const [currentTime, setCurrentTime] = useState("");
 
   useEffect(() => {
@@ -18,13 +22,17 @@ const TopLayout = ({ children, bgColor = "#F6F6F6", ellipseSrc = "/ellipse-bg.sv
   }, []);
 
   return (
-    <div className="relative w-full sm:w-[480px] min-h-screen overflow-hidden p-4" style={{ backgroundColor: bgColor }}>
+    <div
+      className="relative w-full sm:w-[480px] min-h-screen overflow-hidden p-4"
+      style={{ backgroundColor: bgColor }}
+    >
       {/* Background ellipse shape */}
       <div
         className="absolute top-0 left-0 bg-no-repeat bg-contain z-0"
-        style={{ backgroundImage: `url(${ellipseSrc})`, 
-            width: "300px",    
-    height: "180px",
+        style={{
+          backgroundImage: `url(${ellipseSrc})`,
+          width: "300px",
+          height: "180px",
         }}
       />
 
